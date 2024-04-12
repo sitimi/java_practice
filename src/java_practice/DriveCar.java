@@ -3,13 +3,14 @@ package java_practice;
 class DriveCar {
 
 	public static void main(String[] args) {
-		Car c1 = new Car();
+		Car2 c1 = new Car2();
 		
-		c1.setNO(2525);
 		c1.run(30);
 		c1.display();
-		c1.stop();
-		c1.display();
+		
+		Car2 c2 = new Car2(2525);
+		c2.run(50);
+		c2.display();
 	}
 
 }
