@@ -1,11 +1,10 @@
 package java_practice;
 
-
-public class Person {
+public class Person5 {
 	private String name;
 	
-	public void setName(String n) {
-		name = n;
+	public Person5(String name) {
+		this.name = name;
 	}
 	public void display() {
 		System.out.println("名前：" + name);

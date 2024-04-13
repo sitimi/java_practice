@@ -1,21 +1,17 @@
 package java_practice;
 
-public class Student5 {
-	private String name;
-	private int score;
+public class Student5 extends Person5{
+	private int stuNo;
 	
-	public Student5(String n) {
-		name = n;
+	public Student5(String name, int stuNo) {
+		super(name);
+		this.stuNo = stuNo;
 	}
-	public void setScore(int s) {
-		if (0 <= s && s <= 100) {
-			score = s;
-		}else {
-			System.out.println(name + "さんの点数が不正です");
-			score = 0;
-		}
+	public void display() {
+		super.display();
+		System.out.println("学籍番号：" + stuNo);
 	}
-	void display(){
-		System.out.println(name + "さん" + score + "点");
+	public void chgStuNo(int stuNo) {
+		this.stuNo = stuNo;
 	}
 }
