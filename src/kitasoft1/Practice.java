@@ -11,8 +11,10 @@ public class Practice {
 		
 		if(x > y) {
 			System.out.println("xはyより大きい");
-		}else {
+		}else if(x < y){
 			System.out.println("xはyより小さい");
+		}else {
+			System.out.println("xとyは等しい");
 		}
 		
 	}
