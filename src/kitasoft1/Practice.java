@@ -6,21 +6,28 @@ public class Practice {
 
 	public static void main(String[] args)throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int[][] schedule = {{0,1,0,1,1,0,1},{0,1,1,1,1,1,0},{0,1,1,0,1,1,0}};
+		int x = Integer.parseInt(br.readLine());
+		int y = Integer.parseInt(br.readLine());
 		
-		System.out.println("曜日を入力してください\n"
-				+ "0=日曜、1=月曜、2=火曜、3=水曜、4=木曜、5=金曜、6=土曜");
-		int day = Integer.parseInt(br.readLine());
+		if((x < y) && (x % 2 == 0 && y % 2 == 0)) {
+			System.out.println( "xはyより小さく、かつ、xとyは共に偶数である。" );
+			}
 		
-		System.out.println("時間帯を入力してください\n"
-				+ "0=午前、1=午後、2=夜間");
-		int time = Integer.parseInt(br.readLine());
-		
-		if(schedule[time][day] == 0) {
-			System.out.println("休診");
-		}else {
-			System.out.println("開いています");
+		if(x == y && (x < 0 && y < 0)) {
+			System.out.println( "xとyは等しく、かつ、負の数である。" );
 		}
+		
+		if(x < y || x % 2 == 0) {
+			System.out.println( "xはyより小さい、または、xは偶数である。" );
+		}
+		
+		if((x <= 10 || x >= 100) && (y >= 10 && y <= 100)) {
+			 System.out.println( "xは10以下または100以上で、かつ、yは10以上かつ100以下である。" );
+		}
+		if(!(x < 0 && y < 0)) {
+			System.out.println( "xもyも負の数である、ではない。" );
+		}
+
 	}
 	
 }
