@@ -9,11 +9,13 @@ public class Practice {
 		int x = Integer.parseInt(br.readLine());
 		
 		if(x >= 80){
-			System.out.println("たいへんよくできました。");
+			System.out.println("優");
+		}else if(x >= 70){
+			System.out.println("良");
 		}else if(x >= 60){
-			System.out.println("よくできました。");
+			System.out.println("可");
 		}else {
-			System.out.println("ざんねんでした。");
+			System.out.println("不可");
 		}
 		
 		
