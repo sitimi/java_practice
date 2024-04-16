@@ -10,9 +10,9 @@ public class Practice {
 		int y = Integer.parseInt(br.readLine());
 		
 		if(x > y) {
-			System.out.println(x);
+			System.out.println("xはyより大きい");
 		}else {
-			System.out.println(y);
+			System.out.println("xはyより小さい");
 		}
 		
 	}
