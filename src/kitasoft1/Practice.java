@@ -8,12 +8,16 @@ public class Practice {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int x = Integer.parseInt(br.readLine());
 		
-		if(x % 2 == 0) {
-			System.out.println("偶数です");
+		if(x >= 80){
+			System.out.println("たいへんよくできました。");
+		}else if(x >= 60){
+			System.out.println("よくできました。");
 		}else {
-			System.out.println("奇数です");
+			System.out.println("ざんねんでした。");
 		}
-			
-
-	}
+		
+		
+		
+		}
+	
 }
