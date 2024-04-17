@@ -7,25 +7,28 @@ public class Practice {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		int win = 0;
-		int lose = 0;
+		int score1 = 0;
+		int score2 = 0;
+
+		for (int i = 1; i <= 9; i++) {
 		
-		System.out.println("勝敗を10回入力してください"
-				+ " 0：負け　1：勝ち");
+				System.err.println(i + "回表、巨人の得点は？");
+				score1 += Integer.parseInt(br.readLine());
 		
-		for(int i = 1; i <= 10; i++) {
-			boolean judge;
-			judge = Integer.parseInt(br.readLine()) == 0;
-			if(judge) {
-				lose++;
-			}else {
-				win++;
+				System.err.println(i + "回裏、阪神の得点は？");
+				score2 += Integer.parseInt(br.readLine());
 			}
-			
-		}
-		System.out.println("勝ち：" + win + "回");
-		System.out.println("負け：" + lose + "回");
+
 		
+		System.out.println("巨人：" + score1 + "点、阪神：" + score2 + "点");
+		if (score1 == score2) {
+			System.out.println("引き分け");
+		} else if (score1 > score2) {
+			System.out.println("巨人の勝ち");
+		} else {
+			System.out.println("阪神の勝ち");
+		}
+
 	}
 
 }
