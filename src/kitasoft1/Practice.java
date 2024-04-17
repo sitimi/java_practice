@@ -1,44 +1,25 @@
 package kitasoft1;
-import java.io.*;
 
+import java.io.*;
 
 public class Practice {
 
-	public static void main(String[] args)throws IOException {
+	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		int month = Integer.parseInt(br.readLine());
-		
-		switch (month) {
-		case 1: System.out.println("31");
-				break;
-		case 2: System.out.println("28");
-				break;
-		case 3: System.out.println("31");
-				break;
-		case 4: System.out.println("30");
-				break;
-		case 5: System.out.println("30");
-		break;
-		case 6: System.out.println("30");
-		break;
-		case 7: System.out.println("31");
-		break;
-		case 8: System.out.println("31");
-		break;
-		case 9: System.out.println("30");
-		break;
-		case 10: System.out.println("31");
-		break;
-		case 11: System.out.println("30");
-		break;
-		case 12: System.out.println("31");
-		break;
-		default: System.out.println("入力が間違っています");
-		
-		}
-				
+		int nums[] = new int[10];
+		int avg = 0;
 
+		System.out.println("数字を１０回入力してください");
+		for (int i = 0; i < 10; i++) {
+			nums[i] = Integer.parseInt(br.readLine());
+
+		}
+		
+		for (int num : nums) {
+			avg += num;
+		}
+		System.out.println("平均値は" + (avg / nums.length));
 	}
-	
+
 }
