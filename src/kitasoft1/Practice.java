@@ -6,14 +6,21 @@ public class Practice {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int strike = 0;
+		int ball = 0;
 
-		int sum = 0;
 		
-		while (sum < 100) {
+		while (strike < 3 && ball < 4) {
+			int judge = Integer.parseInt(br.readLine());
 			
-			sum += Integer.parseInt(br.readLine());
+			if(judge == 1) {
+				strike++;
+			}else if(judge == 2){
+				ball++;
+			}
+			
 		}
-		System.out.println(sum);
+		System.out.println(ball + "ボール、" + strike + "ストライク");
 
 	}
 
