@@ -13,8 +13,8 @@ public class Practice {
 			nums[i] = Integer.parseInt(br.readLine());
 			
 		}
-		for (int i = 0; i < nums.length; i++) {
-			System.out.println(nums[i] * 2);
+		for (int i = 9; i >= 0; i--) {
+			System.out.println(nums[i] );
 		}
 
 	}
