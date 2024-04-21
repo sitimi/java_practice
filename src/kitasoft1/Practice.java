@@ -5,17 +5,18 @@ import java.io.*;
 public class Practice {
 
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int num = Integer.parseInt(br.readLine());
-
-		for (int i = 1; i <= num; i++) {
-			for (int j = 1; j <= i; j++) {
-				System.out.print("$");
-			}
-			System.out.println("");
+		BufferedReader br = new BufferedReader(
+                new InputStreamReader( System.in ) );
+		int[] nums = new int[10];
+		
+		for (int i = 0; i < nums.length; i++) {
+			nums[i] = Integer.parseInt(br.readLine());
+			
+		}
+		for (int i = 0; i < nums.length; i++) {
+			System.out.println(nums[i] * 2);
 		}
 
 	}
 
-	}
-
+}
